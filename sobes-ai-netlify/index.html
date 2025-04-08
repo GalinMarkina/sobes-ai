@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobes AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #1f1147, #4a0572);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff5c9e, #7b6eff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 700px;
+    }
+    input {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      width: 300px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px 28px;
+      background: linear-gradient(90deg, #ff4e8e, #8c5eff);
+      border: none;
+      border-radius: 14px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .feature {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 24px;
+      border-radius: 20px;
+      width: 280px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #ffd4fc;
+    }
+    .feature p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    .cta {
+      margin-top: 80px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 40px 20px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 700px;
+    }
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      font-size: 1.1rem;
+    }
+    .illustration {
+      margin-top: 40px;
+      max-width: 800px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Sobes AI</h1>
+  <p>Осуществите мечту о работе прямо сейчас. <br>Интервью-симулятор с ИИ подстраивается под ваш стек, даёт обратную связь и готовит к реальным вопросам.</p>
+
+  <img class="illustration" src="sobes-illustration.png" alt="AI Interview Illustration" />
+
+  <div id="form">
+    <input type="email" id="email" placeholder="Введите ваш email"><br>
+    <button onclick="register()">Начать</button>
+  </div>
+
+  <div id="thanks" style="display:none;">
+    <p>Спасибо за регистрацию! 🚀 Вы на пути к уверенности на следующем собеседовании.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <h3>Интервью под ваш стек</h3>
+      <p>ИИ адаптируется под вашу профессию: разработка, дизайн, аналитика и не только.</p>
+    </div>
+    <div class="feature">
+      <h3>Фидбэк в реальном времени</h3>
+      <p>Получайте рекомендации сразу после ответа, как на настоящем собеседовании.</p>
+    </div>
+    <div class="feature">
+      <h3>Прогресс и отчёты</h3>
+      <p>Анализ ответов, отчёты и советы для вашего роста.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Готовы к следующему шагу?</h2>
+    <p>Попробуйте Sobes AI — станьте увереннее и получайте офферы быстрее.</p>
+  </div>
+
+  <script>
+    function register() {
+      const email = document.getElementById('email').value;
+      if (email.includes('@')) {
+        document.getElementById('form').style.display = 'none';
+        document.getElementById('thanks').style.display = 'block';
+      } else {
+        alert('Пожалуйста, введите корректный email.');
+      }
+    }
+  </script>
+</body>
+</html>
